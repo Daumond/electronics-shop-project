@@ -9,10 +9,17 @@ def item():
     return item
 
 
-def test_init(my_item):
-    assert my_item.name == "Laptop"
-    assert my_item.price == 5000
-    assert my_item.quantity == 3
+def test_init(item):
+    assert item.name == "Laptop"
+    assert item.price == 5000
+    assert item.quantity == 3
+
+def test_repr(item):
+    assert repr(item) == "Item('Laptop', 5000, 3)"
+
+
+def test_str(item):
+    assert str(item) == "Laptop"
 
 
 def test_calculate_total_price():
