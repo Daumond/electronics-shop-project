@@ -22,13 +22,11 @@ class Item:
         self.quantity = quantity
         Item.all.append(self)
 
-    @property
-    def pay_rate(self) -> float:
-        return self._pay_rate
+    def __str__(self):
+        return f"{self.__name}"
 
-    @pay_rate.setter
-    def pay_rate(self, pay_rate) -> None:
-        self._pay_rate = pay_rate
+    def __repr__(self):
+        return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
 
     @property
     def name(self) -> str:

@@ -4,11 +4,22 @@ import pytest
 
 
 @pytest.fixture
-def test___init__():
+def item():
     item = Item("Laptop", 5000, 3)
+    return item
+
+
+def test_init(item):
     assert item.name == "Laptop"
     assert item.price == 5000
     assert item.quantity == 3
+
+def test_repr(item):
+    assert repr(item) == "Item('Laptop', 5000, 3)"
+
+
+def test_str(item):
+    assert str(item) == "Laptop"
 
 
 def test_calculate_total_price():
