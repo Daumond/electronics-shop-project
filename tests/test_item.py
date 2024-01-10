@@ -4,7 +4,7 @@ import pytest
 
 
 @pytest.fixture
-def test___init__():
+def item():
     item = Item("Laptop", 5000, 3)
     return item
 
