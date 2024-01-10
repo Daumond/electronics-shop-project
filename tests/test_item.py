@@ -9,6 +9,12 @@ def test___init__():
     return item
 
 
+def test_init(my_item):
+    assert my_item.name == "Laptop"
+    assert my_item.price == 5000
+    assert my_item.quantity == 3
+
+
 def test_calculate_total_price():
     item = Item("Laptop", 5000, 3)
     assert item.calculate_total_price() == 15000
@@ -26,4 +32,3 @@ def test_string_to_number():
     assert Item.string_to_number('10') == 10
     assert Item.string_to_number('5.5') == 5
     assert Item.string_to_number('abc') == 'abc'
-
