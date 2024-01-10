@@ -29,14 +29,6 @@ class Item:
         return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
 
     @property
-    def pay_rate(self) -> float:
-        return self._pay_rate
-
-    @pay_rate.setter
-    def pay_rate(self, pay_rate) -> None:
-        self._pay_rate = pay_rate
-
-    @property
     def name(self) -> str:
         return self.__name
 
