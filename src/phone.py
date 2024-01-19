@@ -19,4 +19,4 @@ class Phone(Item):
         if isinstance(quantity, int) and quantity > 0:
             self._sim = quantity
         else:
-            raise ValueError('Число должно быть больше нуля')
+            raise ValueError('Количество физических SIM-карт должно быть целым числом больше нуля')
