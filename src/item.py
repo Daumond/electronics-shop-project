@@ -6,7 +6,9 @@ from math import floor
 class InstantiateCSVError(Exception):
     def __init__(self, message):
         self.message = message
-        super().__init__(self.message)
+
+    def __str__(self):
+        return self.message
 
 
 class Item:
@@ -81,7 +83,6 @@ class Item:
             raise InstantiateCSVError("Файл item.csv поврежден")
         except FileNotFoundError:
             raise FileNotFoundError("Отсутствует файл item.csv")
-
 
     @staticmethod
     def string_to_number(value: str) -> str or int:
